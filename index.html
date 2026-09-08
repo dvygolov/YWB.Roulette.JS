@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>YWB Roulette</title>
+  <link rel="stylesheet" href="ywbroulette.css">
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:24px;font:16px/1.5 Arial,sans-serif;color:#24272b;background:white}main{max-width:600px;margin:auto}form{max-width:360px;margin:24px auto;display:grid;gap:16px}label{display:grid;gap:6px}input,button{font:inherit;padding:12px;border:1px solid #ccd1d5;border-radius:4px}form button{background:#ffcd32;cursor:pointer}output{display:block;margin:16px 0}[hidden]{display:none!important}
+  </style>
+</head>
+<body>
+  <main>
+    <div id="roulette"></div>
+    <form id="order" action="#" method="post">
+      <h2>Оформление заказа</h2>
+      <label>Имя<input name="name" autocomplete="name" required></label>
+      <label>Телефон<input name="phone" type="tel" autocomplete="tel" required></label>
+      <button type="submit">Отправить заявку</button>
+    </form>
+    <output id="status" aria-live="polite"></output>
+  </main>
+  <script src="ywbroulette.js"></script>
+  <script>
+    const roulette = initRoulette({
+      selectors: { roulette: '#roulette', form: '#order' },
+      texts: { title: 'Откройте свою скидку' },
+      image: 'prizewheel.png'
+    });
+    // Demo only: replace action and remove this handler on a live landing.
+    document.querySelector('#order').addEventListener('submit', event => {
+      event.preventDefault();
+      document.querySelector('#status').textContent = 'Пример: заявка никуда не отправлена.';
+    });
+  </script>
+</body>
+</html>

@@ -84,21 +84,21 @@ If you like this script, PLEASE DONATE!
 
 ## Дополнительные колёса
 
-Четыре изображения из [поста в «Жёлтом Вебе» от 29 августа 2022 года](https://t.me/yellow_web/830). Сохранены как JPEG из публичной веб-версии Telegram, без перерисовки. Права остаются у авторов изображений; отдельная лицензия на них не предоставляется.
+Четыре изображения из [поста в «Жёлтом Вебе» от 29 августа 2022 года](https://t.me/yellow_web/830). Подготовлены в PNG с прозрачным фоном. Права остаются у авторов изображений; отдельная лицензия на них не предоставляется.
 
 Скопируйте папку `wheels` на сайт и замените `image` и `stopAngle` в настройках. Углы ниже выставляют сектор **50%** под верхним указателем:
 
 | Файл | `stopAngle` | Источник |
 | --- | --- | --- |
-| `wheels/telegram-830.jpg` | `315` | [Пост 830](https://t.me/yellow_web/830?single) |
-| `wheels/telegram-831.jpg` | `0` | [Пост 831](https://t.me/yellow_web/831?single) |
-| `wheels/telegram-832.jpg` | `180` | [Пост 832](https://t.me/yellow_web/832?single) |
-| `wheels/telegram-833.jpg` | `67.5` | [Пост 833](https://t.me/yellow_web/833?single) |
+| `wheels/telegram-830.png` | `315` | [Пост 830](https://t.me/yellow_web/830?single) |
+| `wheels/telegram-831.png` | `0` | [Пост 831](https://t.me/yellow_web/831?single) |
+| `wheels/telegram-832.png` | `180` | [Пост 832](https://t.me/yellow_web/832?single) |
+| `wheels/telegram-833.png` | `67.5` | [Пост 833](https://t.me/yellow_web/833?single) |
 
 ```js
 const roulette = initRoulette({
   selectors: { roulette: '#roulette', form: '#order' },
-  image: 'wheels/telegram-830.jpg',
+  image: 'wheels/telegram-830.png',
   stopAngle: 315
 });
 ```
@@ -115,14 +115,14 @@ const roulette = initRoulette({
 
 ## Ещё восемь вариантов
 
-PNG предоставлены владельцем репозитория и сохранены без изменений. У первых семи файлов есть альфа-канал. У `prize-gold.png` шахматная подложка является частью изображения, прозрачности нет. У `bonus-spinner.png` широкие прозрачные поля, поэтому само колесо выглядит меньше. Центральная кнопка виджета перекрывает часть рисунка, в том числе товар на `maximizer.png`.
+Все дополнительные колёса подготовлены в PNG 512 × 512 с прозрачным фоном.
 
-Подключение такое же: `image: 'wheels/имя-файла.png'`. Для `maximizer.png` сектор 50% находится под указателем при `stopAngle: 90`, для `green-discount.png` при `stopAngle: 315`. Для остальных вариантов подберите угол и задайте `texts.popupTitle`, `texts.popupText`, `texts.confirm` под свои призы. Не оставляйте стандартные 50% у колеса с денежными суммами, FS или без надписей: скрипт не распознаёт изображение и не начисляет призы. Права на графику остаются у её авторов.
+Подключение такое же: `image: 'wheels/имя-файла.png'`. Для `coral-turquoise.png` сектор 50% находится под указателем при `stopAngle: 90`, для `green-discount.png` при `stopAngle: 315`. Для остальных вариантов подберите угол и задайте `texts.popupTitle`, `texts.popupText`, `texts.confirm` под свои призы. Не оставляйте стандартные 50% у колеса с денежными суммами, FS или без надписей: скрипт не распознаёт изображение и не начисляет призы. Права на графику остаются у её авторов.
 
-| Бирюзово-розовое, с товаром MAXIMIZER в центре | Пастельное, без надписей |
+| Бирюзово-розовое, с золотым центром | Пастельное, без надписей |
 | --- | --- |
-| [maximizer.png](wheels/maximizer.png) | [pastel.png](wheels/pastel.png) |
-| ![Бирюзово-розовое, с товаром MAXIMIZER в центре](screenshots/maximizer.png) | ![Пастельное, без надписей](screenshots/pastel.png) |
+| [coral-turquoise.png](wheels/coral-turquoise.png) | [pastel.png](wheels/pastel.png) |
+| ![Бирюзово-розовое, с золотым центром](screenshots/coral-turquoise.png) | ![Пастельное, без надписей](screenshots/pastel.png) |
 
 | Разноцветное, со скидками | Разноцветное, с Jackpot |
 | --- | --- |

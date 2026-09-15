@@ -86,21 +86,21 @@ The wheel artwork comes from the [original CPARIP roulette](https://cpa.rip/stat
 
 ## Additional Wheels
 
-Four images from the [Yellow Web post dated August 29, 2022](https://t.me/yellow_web/830). These are JPEG images downloaded from Telegram's public web version, without redrawing. Rights remain with the original artwork owners; no separate license is granted here.
+Four images from the [Yellow Web post dated August 29, 2022](https://t.me/yellow_web/830). Available as PNG images with transparent backgrounds. Rights remain with the original artwork owners; no separate license is granted here.
 
 Copy the `wheels` directory to your website and replace `image` and `stopAngle` in your configuration. These angles place a **50%** sector under the top pointer:
 
 | File | `stopAngle` | Source |
 | --- | --- | --- |
-| `wheels/telegram-830.jpg` | `315` | [Post 830](https://t.me/yellow_web/830?single) |
-| `wheels/telegram-831.jpg` | `0` | [Post 831](https://t.me/yellow_web/831?single) |
-| `wheels/telegram-832.jpg` | `180` | [Post 832](https://t.me/yellow_web/832?single) |
-| `wheels/telegram-833.jpg` | `67.5` | [Post 833](https://t.me/yellow_web/833?single) |
+| `wheels/telegram-830.png` | `315` | [Post 830](https://t.me/yellow_web/830?single) |
+| `wheels/telegram-831.png` | `0` | [Post 831](https://t.me/yellow_web/831?single) |
+| `wheels/telegram-832.png` | `180` | [Post 832](https://t.me/yellow_web/832?single) |
+| `wheels/telegram-833.png` | `67.5` | [Post 833](https://t.me/yellow_web/833?single) |
 
 ```js
 const roulette = initRoulette({
   selectors: { roulette: '#roulette', form: '#order' },
-  image: 'wheels/telegram-830.jpg',
+  image: 'wheels/telegram-830.png',
   stopAngle: 315
 });
 ```
@@ -117,14 +117,14 @@ Screenshots of each image in the working widget (Russian labels):
 
 ## Eight More Designs
 
-These PNGs were supplied by the repository owner and are preserved unchanged. The first seven files have an alpha channel. In `prize-gold.png`, the checkerboard is baked into the image; it is not transparent. `bonus-spinner.png` has wide transparent margins, so its wheel appears smaller. The widget's center button covers part of the artwork, including the product in `maximizer.png`.
+All additional wheels are supplied as 512 × 512 PNG images with transparent backgrounds.
 
-Use `image: 'wheels/filename.png'`. For `maximizer.png`, `stopAngle: 90` places 50% under the pointer; for `green-discount.png`, use `stopAngle: 315`. For other designs, choose the angle and set `texts.popupTitle`, `texts.popupText` and `texts.confirm` to match your prizes. Do not keep the default 50% message for wheels showing amounts, FS or no labels: the script does not interpret the image or award prizes. Artwork rights remain with their respective owners.
+Use `image: 'wheels/filename.png'`. For `coral-turquoise.png`, `stopAngle: 90` places 50% under the pointer; for `green-discount.png`, use `stopAngle: 315`. For other designs, choose the angle and set `texts.popupTitle`, `texts.popupText` and `texts.confirm` to match your prizes. Do not keep the default 50% message for wheels showing amounts, FS or no labels: the script does not interpret the image or award prizes. Artwork rights remain with their respective owners.
 
-| Turquoise and pink, MAXIMIZER product in the center | Pastel, unlabeled |
+| Turquoise and pink, with a gold center | Pastel, unlabeled |
 | --- | --- |
-| [maximizer.png](wheels/maximizer.png) | [pastel.png](wheels/pastel.png) |
-| ![Turquoise and pink, MAXIMIZER product in the center](screenshots/maximizer.png) | ![Pastel, unlabeled](screenshots/pastel.png) |
+| [coral-turquoise.png](wheels/coral-turquoise.png) | [pastel.png](wheels/pastel.png) |
+| ![Turquoise and pink, with a gold center](screenshots/coral-turquoise.png) | ![Pastel, unlabeled](screenshots/pastel.png) |
 
 | Multicolor discounts | Multicolor with Jackpot |
 | --- | --- |

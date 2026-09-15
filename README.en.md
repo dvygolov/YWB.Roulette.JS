@@ -1,3 +1,18 @@
+```text
+    _            __     __  _ _             __          __  _
+   | |           \ \   / / | | |            \ \        / / | |
+   | |__  _   _   \ \_/ /__| | | _____      _\ \  /\  / /__| |__
+   | '_ \| | | |   \   / _ \ | |/ _ \ \ /\ / /\ \/  \/ / _ \ '_ \
+   | |_) | |_| |    | |  __/ | | (_) \ V  V /  \  /\  /  __/ |_) |
+   |_.__/ \__, |    |_|\___|_|_|\___/ \_/\_/    \/  \/ \___|_.__/
+           __/ |
+          |___/             https://yellowweb.top
+
+If you like this script, PLEASE DONATE!
+```
+
+[Support this project](https://yellowweb.top/donate)
+
 # YWB.Roulette.JS
 
 [Русский](README.md) | [English](README.en.md)
@@ -68,6 +83,37 @@ The `texts` option customizes the visible headings and buttons shown above. The 
 The discount is predetermined, not random. With the included image, `67.5` places the 50% sector under the top pointer. If you replace the image or change the angle, match the result text to the displayed sector. Your server must validate the discount applied to an order.
 
 The wheel artwork comes from the [original CPARIP roulette](https://cpa.rip/stati/roulette-script/). The JavaScript integration module was reworked for Yellow Scripts. Rights to the original artwork belong to its respective rights holders; no separate license for it is granted here.
+
+## Additional Wheels
+
+Four images from the [Yellow Web post dated August 29, 2022](https://t.me/yellow_web/830). These are JPEG images downloaded from Telegram's public web version, without redrawing. Rights remain with the original artwork owners; no separate license is granted here.
+
+Copy the `wheels` directory to your website and replace `image` and `stopAngle` in your configuration. These angles place a **50%** sector under the top pointer:
+
+| File | `stopAngle` | Source |
+| --- | --- | --- |
+| `wheels/telegram-830.jpg` | `315` | [Post 830](https://t.me/yellow_web/830?single) |
+| `wheels/telegram-831.jpg` | `0` | [Post 831](https://t.me/yellow_web/831?single) |
+| `wheels/telegram-832.jpg` | `180` | [Post 832](https://t.me/yellow_web/832?single) |
+| `wheels/telegram-833.jpg` | `67.5` | [Post 833](https://t.me/yellow_web/833?single) |
+
+```js
+const roulette = initRoulette({
+  selectors: { roulette: '#roulette', form: '#order' },
+  image: 'wheels/telegram-830.jpg',
+  stopAngle: 315
+});
+```
+
+Screenshots of each image in the working widget (Russian labels):
+
+| 830: multicolor, 8 sectors | 831: gradient, 8 sectors |
+| --- | --- |
+| ![Wheel 830](screenshots/telegram-830.png) | ![Wheel 831](screenshots/telegram-831.png) |
+
+| 832: blue and yellow, 16 sectors | 833: red and yellow, 16 sectors |
+| --- | --- |
+| ![Wheel 832](screenshots/telegram-832.png) | ![Wheel 833](screenshots/telegram-833.png) |
 
 ## Trying the Example
 

@@ -82,7 +82,7 @@ The `texts` option customizes the visible headings and buttons shown above. The 
 
 The discount is predetermined, not random. With the included image, `67.5` places the 50% sector under the top pointer. If you replace the image or change the angle, match the result text to the displayed sector. Your server must validate the discount applied to an order.
 
-The wheel artwork comes from the [original CPARIP roulette](https://cpa.rip/stati/roulette-script/). The JavaScript integration module was reworked for Yellow Scripts. Rights to the original artwork belong to its respective rights holders; no separate license for it is granted here.
+Rights to the artwork belong to its respective rights holders; no separate license for it is granted here.
 
 ## Wheels
 

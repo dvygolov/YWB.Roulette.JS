@@ -1,8 +1,12 @@
 # YWB.Roulette.JS
 
+[Русский](README.md) | [English](README.en.md)
+
 Рулетка для лендинга с подключением в стиле YWB Doors, GiftBoxes и 3from5. Версия **1.0.0**. Без jQuery и других зависимостей.
 
 [Живой пример и описание](https://yellow-scripts.pages.dev/scripts/roulette/) · [Жёлтый Веб](https://yellowweb.top/)
+
+![Рулетка в комплектном примере index.html](screenshot.png)
 
 ## Подключение
 

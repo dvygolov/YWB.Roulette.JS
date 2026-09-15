@@ -113,6 +113,32 @@ const roulette = initRoulette({
 | --- | --- |
 | ![Колесо 832](screenshots/telegram-832.png) | ![Колесо 833](screenshots/telegram-833.png) |
 
+## Ещё восемь вариантов
+
+PNG предоставлены владельцем репозитория и сохранены без изменений. У первых семи файлов есть альфа-канал. У `prize-gold.png` шахматная подложка является частью изображения, прозрачности нет. У `bonus-spinner.png` широкие прозрачные поля, поэтому само колесо выглядит меньше. Центральная кнопка виджета перекрывает часть рисунка, в том числе товар на `maximizer.png`.
+
+Подключение такое же: `image: 'wheels/имя-файла.png'`. Для `maximizer.png` сектор 50% находится под указателем при `stopAngle: 90`, для `green-discount.png` при `stopAngle: 315`. Для остальных вариантов подберите угол и задайте `texts.popupTitle`, `texts.popupText`, `texts.confirm` под свои призы. Не оставляйте стандартные 50% у колеса с денежными суммами, FS или без надписей: скрипт не распознаёт изображение и не начисляет призы. Права на графику остаются у её авторов.
+
+| Бирюзово-розовое, с товаром MAXIMIZER в центре | Пастельное, без надписей |
+| --- | --- |
+| [maximizer.png](wheels/maximizer.png) | [pastel.png](wheels/pastel.png) |
+| ![Бирюзово-розовое, с товаром MAXIMIZER в центре](screenshots/maximizer.png) | ![Пастельное, без надписей](screenshots/pastel.png) |
+
+| Разноцветное, со скидками | Разноцветное, с Jackpot |
+| --- | --- |
+| [discounts.png](wheels/discounts.png) | [jackpot.png](wheels/jackpot.png) |
+| ![Разноцветное, со скидками](screenshots/discounts.png) | ![Разноцветное, с Jackpot](screenshots/jackpot.png) |
+
+| Цветное, без надписей | Зелёное, со скидками |
+| --- | --- |
+| [colors.png](wheels/colors.png) | [green-discount.png](wheels/green-discount.png) |
+| ![Цветное, без надписей](screenshots/colors.png) | ![Зелёное, со скидками](screenshots/green-discount.png) |
+
+| Бонусное: суммы, FS, MISS | Золотое: числа, призы и множители |
+| --- | --- |
+| [bonus-spinner.png](wheels/bonus-spinner.png) | [prize-gold.png](wheels/prize-gold.png) |
+| ![Бонусное: суммы, FS, MISS](screenshots/bonus-spinner.png) | ![Золотое: числа, призы и множители](screenshots/prize-gold.png) |
+
 ## Проверка примера
 
 Откройте `index.html` в браузере. В комплектном примере отправка формы отключена явно указанным обработчиком `submit`. Удалите его при установке на рабочий лендинг и укажите свой `action`.

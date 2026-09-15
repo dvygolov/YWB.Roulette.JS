@@ -115,6 +115,32 @@ Screenshots of each image in the working widget (Russian labels):
 | --- | --- |
 | ![Wheel 832](screenshots/telegram-832.png) | ![Wheel 833](screenshots/telegram-833.png) |
 
+## Eight More Designs
+
+These PNGs were supplied by the repository owner and are preserved unchanged. The first seven files have an alpha channel. In `prize-gold.png`, the checkerboard is baked into the image; it is not transparent. `bonus-spinner.png` has wide transparent margins, so its wheel appears smaller. The widget's center button covers part of the artwork, including the product in `maximizer.png`.
+
+Use `image: 'wheels/filename.png'`. For `maximizer.png`, `stopAngle: 90` places 50% under the pointer; for `green-discount.png`, use `stopAngle: 315`. For other designs, choose the angle and set `texts.popupTitle`, `texts.popupText` and `texts.confirm` to match your prizes. Do not keep the default 50% message for wheels showing amounts, FS or no labels: the script does not interpret the image or award prizes. Artwork rights remain with their respective owners.
+
+| Turquoise and pink, MAXIMIZER product in the center | Pastel, unlabeled |
+| --- | --- |
+| [maximizer.png](wheels/maximizer.png) | [pastel.png](wheels/pastel.png) |
+| ![Turquoise and pink, MAXIMIZER product in the center](screenshots/maximizer.png) | ![Pastel, unlabeled](screenshots/pastel.png) |
+
+| Multicolor discounts | Multicolor with Jackpot |
+| --- | --- |
+| [discounts.png](wheels/discounts.png) | [jackpot.png](wheels/jackpot.png) |
+| ![Multicolor discounts](screenshots/discounts.png) | ![Multicolor with Jackpot](screenshots/jackpot.png) |
+
+| Color wheel, unlabeled | Green discount wheel |
+| --- | --- |
+| [colors.png](wheels/colors.png) | [green-discount.png](wheels/green-discount.png) |
+| ![Color wheel, unlabeled](screenshots/colors.png) | ![Green discount wheel](screenshots/green-discount.png) |
+
+| Bonuses: amounts, FS, MISS | Gold: numbers, prizes and multipliers |
+| --- | --- |
+| [bonus-spinner.png](wheels/bonus-spinner.png) | [prize-gold.png](wheels/prize-gold.png) |
+| ![Bonuses: amounts, FS, MISS](screenshots/bonus-spinner.png) | ![Gold: numbers, prizes and multipliers](screenshots/prize-gold.png) |
+
 ## Trying the Example
 
 Open `index.html` in a browser. The included example disables form submission with an explicitly marked `submit` handler. Remove that handler and set your own form `action` when deploying to a live landing page.

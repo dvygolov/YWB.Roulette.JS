@@ -84,62 +84,59 @@ The discount is predetermined, not random. With the included image, `67.5` place
 
 The wheel artwork comes from the [original CPARIP roulette](https://cpa.rip/stati/roulette-script/). The JavaScript integration module was reworked for Yellow Scripts. Rights to the original artwork belong to its respective rights holders; no separate license for it is granted here.
 
-## Additional Wheels
+## Wheels
 
-Four images from the [Yellow Web post dated August 29, 2022](https://t.me/yellow_web/830). Available as PNG images with transparent backgrounds. Rights remain with the original artwork owners; no separate license is granted here.
-
-Copy the `wheels` directory to your website and replace `image` and `stopAngle` in your configuration. These angles place a **50%** sector under the top pointer:
-
-| File | `stopAngle` | Source |
-| --- | --- | --- |
-| `wheels/telegram-830.png` | `315` | [Post 830](https://t.me/yellow_web/830?single) |
-| `wheels/telegram-831.png` | `0` | [Post 831](https://t.me/yellow_web/831?single) |
-| `wheels/telegram-832.png` | `180` | [Post 832](https://t.me/yellow_web/832?single) |
-| `wheels/telegram-833.png` | `67.5` | [Post 833](https://t.me/yellow_web/833?single) |
+Choose a design, copy the `wheels` directory and set `image` and `stopAngle`. Each preview lists the sector that will stop under the top pointer. Configure the result message separately through `texts`.
 
 ```js
 const roulette = initRoulette({
   selectors: { roulette: '#roulette', form: '#order' },
-  image: 'wheels/telegram-830.png',
+  image: 'wheels/multicolor.png',
   stopAngle: 315
 });
 ```
 
-Screenshots of each image in the working widget (Russian labels):
-
-| 830: multicolor, 8 sectors | 831: gradient, 8 sectors |
+| multicolor | gradient |
 | --- | --- |
-| ![Wheel 830](screenshots/telegram-830.png) | ![Wheel 831](screenshots/telegram-831.png) |
+| ![multicolor](wheels/multicolor.png) | ![gradient](wheels/gradient.png) |
+| [multicolor.png](wheels/multicolor.png) | [gradient.png](wheels/gradient.png) |
+| `stopAngle: 315` | `stopAngle: 0` |
+| 50% | 50% |
 
-| 832: blue and yellow, 16 sectors | 833: red and yellow, 16 sectors |
+| blue-yellow | red-yellow |
 | --- | --- |
-| ![Wheel 832](screenshots/telegram-832.png) | ![Wheel 833](screenshots/telegram-833.png) |
+| ![blue-yellow](wheels/blue-yellow.png) | ![red-yellow](wheels/red-yellow.png) |
+| [blue-yellow.png](wheels/blue-yellow.png) | [red-yellow.png](wheels/red-yellow.png) |
+| `stopAngle: 180` | `stopAngle: 67.5` |
+| 50% | 50% |
 
-## Eight More Designs
-
-All additional wheels are supplied as 512 × 512 PNG images with transparent backgrounds.
-
-Use `image: 'wheels/filename.png'`. For `coral-turquoise.png`, `stopAngle: 90` places 50% under the pointer; for `green-discount.png`, use `stopAngle: 315`. For other designs, choose the angle and set `texts.popupTitle`, `texts.popupText` and `texts.confirm` to match your prizes. Do not keep the default 50% message for wheels showing amounts, FS or no labels: the script does not interpret the image or award prizes. Artwork rights remain with their respective owners.
-
-| Turquoise and pink, with a gold center | Pastel, unlabeled |
+| coral-turquoise | pastel |
 | --- | --- |
+| ![coral-turquoise](wheels/coral-turquoise.png) | ![pastel](wheels/pastel.png) |
 | [coral-turquoise.png](wheels/coral-turquoise.png) | [pastel.png](wheels/pastel.png) |
-| ![Turquoise and pink, with a gold center](screenshots/coral-turquoise.png) | ![Pastel, unlabeled](screenshots/pastel.png) |
+| `stopAngle: 90` | `stopAngle: 0` |
+| 50% | Light unlabeled sector |
 
-| Multicolor discounts | Multicolor with Jackpot |
+| discounts | jackpot |
 | --- | --- |
+| ![discounts](wheels/discounts.png) | ![jackpot](wheels/jackpot.png) |
 | [discounts.png](wheels/discounts.png) | [jackpot.png](wheels/jackpot.png) |
-| ![Multicolor discounts](screenshots/discounts.png) | ![Multicolor with Jackpot](screenshots/jackpot.png) |
+| `stopAngle: 135` | `stopAngle: 330` |
+| −50% | Jackpot |
 
-| Color wheel, unlabeled | Green discount wheel |
+| colors | green-discount |
 | --- | --- |
+| ![colors](wheels/colors.png) | ![green-discount](wheels/green-discount.png) |
 | [colors.png](wheels/colors.png) | [green-discount.png](wheels/green-discount.png) |
-| ![Color wheel, unlabeled](screenshots/colors.png) | ![Green discount wheel](screenshots/green-discount.png) |
+| `stopAngle: 0` | `stopAngle: 315` |
+| Green unlabeled sector | 50% |
 
-| Bonuses: amounts, FS, MISS | Gold: numbers, prizes and multipliers |
+| bonus-spinner | prize-gold |
 | --- | --- |
+| ![bonus-spinner](wheels/bonus-spinner.png) | ![prize-gold](wheels/prize-gold.png) |
 | [bonus-spinner.png](wheels/bonus-spinner.png) | [prize-gold.png](wheels/prize-gold.png) |
-| ![Bonuses: amounts, FS, MISS](screenshots/bonus-spinner.png) | ![Gold: numbers, prizes and multipliers](screenshots/prize-gold.png) |
+| `stopAngle: 315` | `stopAngle: 315` |
+| 50 FS | 50 (no unit) |
 
 ## Trying the Example
 

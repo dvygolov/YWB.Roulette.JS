@@ -82,62 +82,59 @@ If you like this script, PLEASE DONATE!
 
 Графика колеса взята из [исходной рулетки CPARIP](https://cpa.rip/stati/roulette-script/). JS-модуль подключения переработан для Yellow Scripts. Права на исходную графику принадлежат её правообладателям; отдельная лицензия на неё здесь не предоставляется.
 
-## Дополнительные колёса
+## Колёса
 
-Четыре изображения из [поста в «Жёлтом Вебе» от 29 августа 2022 года](https://t.me/yellow_web/830). Подготовлены в PNG с прозрачным фоном. Права остаются у авторов изображений; отдельная лицензия на них не предоставляется.
-
-Скопируйте папку `wheels` на сайт и замените `image` и `stopAngle` в настройках. Углы ниже выставляют сектор **50%** под верхним указателем:
-
-| Файл | `stopAngle` | Источник |
-| --- | --- | --- |
-| `wheels/telegram-830.png` | `315` | [Пост 830](https://t.me/yellow_web/830?single) |
-| `wheels/telegram-831.png` | `0` | [Пост 831](https://t.me/yellow_web/831?single) |
-| `wheels/telegram-832.png` | `180` | [Пост 832](https://t.me/yellow_web/832?single) |
-| `wheels/telegram-833.png` | `67.5` | [Пост 833](https://t.me/yellow_web/833?single) |
+Выберите дизайн, скопируйте папку `wheels` и задайте `image` и `stopAngle`. Под каждым превью указан сектор, который окажется под верхней стрелкой. Текст результата задаётся отдельно через `texts`.
 
 ```js
 const roulette = initRoulette({
   selectors: { roulette: '#roulette', form: '#order' },
-  image: 'wheels/telegram-830.png',
+  image: 'wheels/multicolor.png',
   stopAngle: 315
 });
 ```
 
-Скриншоты работающего виджета с каждым изображением:
-
-| 830: разноцветное, 8 секторов | 831: градиентное, 8 секторов |
+| multicolor | gradient |
 | --- | --- |
-| ![Колесо 830](screenshots/telegram-830.png) | ![Колесо 831](screenshots/telegram-831.png) |
+| ![multicolor](wheels/multicolor.png) | ![gradient](wheels/gradient.png) |
+| [multicolor.png](wheels/multicolor.png) | [gradient.png](wheels/gradient.png) |
+| `stopAngle: 315` | `stopAngle: 0` |
+| 50% | 50% |
 
-| 832: сине-жёлтое, 16 секторов | 833: красно-жёлтое, 16 секторов |
+| blue-yellow | red-yellow |
 | --- | --- |
-| ![Колесо 832](screenshots/telegram-832.png) | ![Колесо 833](screenshots/telegram-833.png) |
+| ![blue-yellow](wheels/blue-yellow.png) | ![red-yellow](wheels/red-yellow.png) |
+| [blue-yellow.png](wheels/blue-yellow.png) | [red-yellow.png](wheels/red-yellow.png) |
+| `stopAngle: 180` | `stopAngle: 67.5` |
+| 50% | 50% |
 
-## Ещё восемь вариантов
-
-Все дополнительные колёса подготовлены в PNG 512 × 512 с прозрачным фоном.
-
-Подключение такое же: `image: 'wheels/имя-файла.png'`. Для `coral-turquoise.png` сектор 50% находится под указателем при `stopAngle: 90`, для `green-discount.png` при `stopAngle: 315`. Для остальных вариантов подберите угол и задайте `texts.popupTitle`, `texts.popupText`, `texts.confirm` под свои призы. Не оставляйте стандартные 50% у колеса с денежными суммами, FS или без надписей: скрипт не распознаёт изображение и не начисляет призы. Права на графику остаются у её авторов.
-
-| Бирюзово-розовое, с золотым центром | Пастельное, без надписей |
+| coral-turquoise | pastel |
 | --- | --- |
+| ![coral-turquoise](wheels/coral-turquoise.png) | ![pastel](wheels/pastel.png) |
 | [coral-turquoise.png](wheels/coral-turquoise.png) | [pastel.png](wheels/pastel.png) |
-| ![Бирюзово-розовое, с золотым центром](screenshots/coral-turquoise.png) | ![Пастельное, без надписей](screenshots/pastel.png) |
+| `stopAngle: 90` | `stopAngle: 0` |
+| 50% | Светлый сектор без надписи |
 
-| Разноцветное, со скидками | Разноцветное, с Jackpot |
+| discounts | jackpot |
 | --- | --- |
+| ![discounts](wheels/discounts.png) | ![jackpot](wheels/jackpot.png) |
 | [discounts.png](wheels/discounts.png) | [jackpot.png](wheels/jackpot.png) |
-| ![Разноцветное, со скидками](screenshots/discounts.png) | ![Разноцветное, с Jackpot](screenshots/jackpot.png) |
+| `stopAngle: 135` | `stopAngle: 330` |
+| −50% | Jackpot |
 
-| Цветное, без надписей | Зелёное, со скидками |
+| colors | green-discount |
 | --- | --- |
+| ![colors](wheels/colors.png) | ![green-discount](wheels/green-discount.png) |
 | [colors.png](wheels/colors.png) | [green-discount.png](wheels/green-discount.png) |
-| ![Цветное, без надписей](screenshots/colors.png) | ![Зелёное, со скидками](screenshots/green-discount.png) |
+| `stopAngle: 0` | `stopAngle: 315` |
+| Зелёный сектор без надписи | 50% |
 
-| Бонусное: суммы, FS, MISS | Золотое: числа, призы и множители |
+| bonus-spinner | prize-gold |
 | --- | --- |
+| ![bonus-spinner](wheels/bonus-spinner.png) | ![prize-gold](wheels/prize-gold.png) |
 | [bonus-spinner.png](wheels/bonus-spinner.png) | [prize-gold.png](wheels/prize-gold.png) |
-| ![Бонусное: суммы, FS, MISS](screenshots/bonus-spinner.png) | ![Золотое: числа, призы и множители](screenshots/prize-gold.png) |
+| `stopAngle: 315` | `stopAngle: 315` |
+| 50 FS | 50 (без единицы измерения) |
 
 ## Проверка примера
 
